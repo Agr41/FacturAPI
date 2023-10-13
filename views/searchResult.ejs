@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado de la búsqueda de clientes</title>
+</head>
+<body>
+    <h1>Resultado de la búsqueda de clientes</h1>
+    <% if (searchResult && searchResult.data && searchResult.data.length > 0) { %>
+        <ul>
+            <% searchResult.data.forEach(function(customer) { %>
+                <li>
+                    <h3><%= customer.legal_name %></h3>
+                    <% if (customer.tax_id) { %>
+                        <p>Tax ID: <%= customer.tax_id %></p>
+                    <% } %>
+                    <% if (customer.tax_system) { %>
+                        <p>Tax System: <%= customer.tax_system %></p>
+                    <% } %>
+                    <p>Dirección:</p>
+                    <ul>
+                        <% if (customer.address.zip) { %>
+                            <li>Código Postal: <%= customer.address.zip %></li>
+                        <% } %>
+                        <% if (customer.address.street) { %>
+                            <li>Calle: <%= customer.address.street %></li>
+                        <% } %>
+                        <% if (customer.address.exterior) { %>
+                            <li>Número Exterior: <%= customer.address.exterior %></li>
+                        <% } %>
+                        <% if (customer.address.interior) { %>
+                            <li>Número Interior: <%= customer.address.interior %></li>
+                        <% } %>
+                        <% if (customer.address.neighborhood) { %>
+                            <li>Colonia: <%= customer.address.neighborhood %></li>
+                        <% } %>
+                        <% if (customer.address.city) { %>
+                            <li>Ciudad: <%= customer.address.city %></li>
+                        <% } %>
+                        <% if (customer.address.municipality) { %>
+                            <li>Municipio: <%= customer.address.municipality %></li>
+                        <% } %>
+                        <% if (customer.address.state) { %>
+                            <li>Estado: <%= customer.address.state %></li>
+                        <% } %>
+                        <% if (customer.address.country) { %>
+                            <li>País: <%= customer.address.country %></li>
+                        <% } %>
+                    </ul>
+                    <% if (customer.email) { %>
+                        <p>Email: <%= customer.email %></p>
+                    <% } %>
+                    <% if (customer.phone) { %>
+                        <p>Teléfono: <%= customer.phone %></p>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No se encontraron clientes.</p>
+    <% } %>
+</body>
+</html>

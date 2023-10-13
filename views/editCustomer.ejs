@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Búsqueda de clientes</title>
+</head>
+<body>
+    <h2>Obtener clientes</h2>
+    <form action="/editCustomer" method="post">
+        <label for="idCustomer">ID del cliente:</label>
+        <input type="text" id="idCustomer" name="idCustomer">
+        <br>
+        <hr>
+        <br>
+
+        <label for="nombreCliente">Nombre del Cliente:</label>
+        <input type="text" id="nombreCliente" name="nombreCliente" placeholder="Editar">
+        <br> 
+        <label for="taxIdCliente">RFC:</label>
+        <input type="text" id="taxIdCliente" name="taxIdCliente" placeholder="Editar">
+        <br>
+        <label for="taxSystemCliente">Clave del régimen fiscal:</label>
+      <input type="number" id="taxSystemCliente" name="taxSystemCliente" maxlength="3" placeholder="Editar">
+      <br>
+      <label for="phoneCliente">Teléfono del Cliente:</label>
+      <input type="number" id="phoneCliente" name="phoneCliente" placeholder="Editar">
+      <br>
+        <label for="emailCliente">Email del Cliente:</label>
+        <input type="email" id="emailCliente" name="emailCliente" placeholder="Editar">
+        <br>
+        
+        <h3>Domicilio</h3>
+      <label for="zipCliente">Código Postal:</label>
+      <input type="number" id="zipCliente" name="zipCliente" placeholder="Editar">
+      <br>
+
+      <label for="streetCliente">Calle:</label>
+      <input type="text" id="streetCliente" name="streetCliente" placeholder="Editar">
+      <br>
+
+      <label for="exteriorCliente">Número Exterior:</label>
+      <input type="number" id="exteriorCliente" name="exteriorCliente" placeholder="Editar">
+      <br>
+
+      <label for="interiorCliente">Número Interior:</label>
+      <input type="number" id="interiorCliente" name="interiorCliente" placeholder="Editar">
+      <br>
+
+      <label for="neighborhoodCliente">Colonia:</label>
+      <input type="text" id="neighborhoodCliente" name="neighborhoodCliente" placeholder="Editar">
+      <br>
+
+      <label for="cityCliente">Ciudad:</label>
+      <input type="text" id="cityCliente" name="cityCliente" placeholder="Editar">
+      <br>
+
+      <label for="municipalityCliente">Municipio:</label>
+      <input type="text" id="municipalityCliente" name="municipalityCliente" placeholder="Editar">
+      <br>
+
+      <label for="stateCliente">Estado:</label>
+      <input type="text" id="stateCliente" name="stateCliente" placeholder="Editar" maxlength="3">
+      <br>
+
+      <label for="countryCliente">País:</label>
+      <input type="text" id="countryCliente" name="countryCliente" placeholder="Editar" maxlength="3">
+      <br><br>
+
+        <button type="submit">Editar</button>
+    </form>
+</body>
+</html>

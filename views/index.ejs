@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title </title>
+
+</head>
+<body>
+    <h2>Crear cliente</h2>
+    <form action="/customers" method="post">
+        <label for="nombreCliente">Nombre del Cliente:</label>
+        <input type="text" id="nombreCliente" name="nombreCliente" required>
+        <br> 
+        <label for="taxIdCliente">RFC:</label>
+        <input type="text" id="taxIdCliente" name="taxIdCliente" required>
+        <br>
+        <label for="taxSystemCliente">Clave del régimen fiscal:</label>
+      <input type="number" id="taxSystemCliente" name="taxSystemCliente" maxlength="3" required>
+      <br>
+      <label for="phoneCliente">Teléfono del Cliente:</label>
+      <input type="number" id="phoneCliente" name="phoneCliente" placeholder="Opcional">
+      <br>
+        <label for="emailCliente">Email del Cliente:</label>
+        <input type="email" id="emailCliente" name="emailCliente" placeholder="Opcional">
+        <br>
+        
+        <h3>Domicilio</h3>
+      <label for="zipCliente">Código Postal:</label>
+      <input type="number" id="zipCliente" name="zipCliente" required>
+      <br>
+
+      <label for="streetCliente">Calle:</label>
+      <input type="text" id="streetCliente" name="streetCliente" placeholder="Opcional">
+      <br>
+
+      <label for="exteriorCliente">Número Exterior:</label>
+      <input type="number" id="exteriorCliente" name="exteriorCliente" placeholder="Opcional">
+      <br>
+
+      <label for="interiorCliente">Número Interior:</label>
+      <input type="number" id="interiorCliente" name="interiorCliente" placeholder="Opcional">
+      <br>
+
+      <label for="neighborhoodCliente">Colonia:</label>
+      <input type="text" id="neighborhoodCliente" name="neighborhoodCliente" placeholder="Opcional">
+      <br>
+
+      <label for="cityCliente">Ciudad:</label>
+      <input type="text" id="cityCliente" name="cityCliente" placeholder="Opcional">
+      <br>
+
+      <label for="municipalityCliente">Municipio:</label>
+      <input type="text" id="municipalityCliente" name="municipalityCliente" placeholder="Opcional">
+      <br>
+
+      <label for="stateCliente">Estado:</label>
+      <input type="text" id="stateCliente" name="stateCliente" placeholder="Opcional" maxlength="3">
+      <br>
+
+      <label for="countryCliente">País:</label>
+      <input type="text" id="countryCliente" name="countryCliente" placeholder="Opcional" maxlength="3">
+      <br><br>
+
+        <button type="submit">Crear cliente</button>
+    </form>
+</body>
+</html>

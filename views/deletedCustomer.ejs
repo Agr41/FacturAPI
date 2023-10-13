@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Cliente Eliminado</title>
+</head>
+<body>
+    <h1>Detalles del Cliente Eliminado</h1>
+    <% if (removedCustomer) { %>
+        <p>ID del Cliente Eliminado: <%= removedCustomer.id %></p>
+        <p>Nombre del Cliente Eliminado: <%= removedCustomer.legal_name %></p>
+    <% } else { %>
+        <p>No se encontró el cliente eliminado.</p>
+    <% } %>
+</body>
+</html>

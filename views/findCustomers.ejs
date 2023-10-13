@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Búsqueda de clientes</title>
+</head>
+<body>
+    <h2>Obtener clientes</h2>
+    <form action="/findCustomers" method="post">
+        <label for="qCliente">Nombre fiscal o RFC:</label>
+        <input type="text" id="qCliente" name="qCliente">
+        <br>
+
+    <h3>Rango de fechas</h3>
+<hr>
+        <label for="gteCliente">Limite inferior:</label>
+        <input type="date" id="gteCliente" name="gteCliente" placeholder="Opcional">
+        <br>
+        <label for="lteCliente">Limite superior:</label>
+        <input type="date" id="lteCliente" name="lteCliente" placeholder="Opcional">
+<hr>
+<br>
+        <label for="limitCliente">Cantidad máxima de resultados:</label>
+        <input type="number" id="limitCliente" name="limitCliente" value="1">
+        <br>
+<!--         <label for="pageCliente">Cantidad máxima de resultados:</label>
+        <input type="number" id="pageCliente" name="pageCliente" value="1">
+        <br> -->
+
+        <button type="submit">Obtener clientes</button>
+    </form>
+</body>
+</html>

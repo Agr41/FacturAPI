@@ -66,7 +66,6 @@ router.post('/', async (req, res) => {
           });
         // Envía una respuesta al cliente
 
-        console.log(req.body);
         console.log(product);
         res.render('renderProduct', { product });
     } catch (error) {

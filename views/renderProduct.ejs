@@ -6,46 +6,33 @@
 <body>
     <h1>Detalles del Producto</h1>
     <% if (product) { %>
-        <p>Descripcion: <%= product.description %></p>
-        <% if (product.product_key) { %>
-            <p>Clave: <%= product.product_key %></p>
-        <% } %>
-        <% if (product.price) { %>
-            <p>precio: <%= product.price %></p>
-        <% } %>
-        <% if (product.tax_included) { %>
-            <p>tax_included: <%= product.tax_included %></p>
-        <% } %>
-
-        <p>Taxability:</p>
+        <p>Descripción: <%= product.description %></p>
+        <p>Clave del Producto: <%= product.product_key %></p>
+        <p>Precio: <%= product.price %></p>
+        <p>Impuesto Incluido: <%= product.tax_included %></p>
+        <p>Taxabilidad: <%= product.taxability %></p>
+        <p>Impuestos:</p>
         <ul>
-            <% if (product.taxes.rate) { %>
-                <li>rate <%= product.taxes.rate %></li>
-            <% } %>
-            <% if (product.taxes.base) { %>
-                <li>base <%= product.taxes.base %></li>
-            <% } %>
-            <% if (product.taxes.type) { %>
-                <li>type: <%= product.taxes.type %></li>
-            <% } %>
-            <% if (product.taxes.factor) { %>
-                <li>factor: <%= product.taxes.factor %></li>
-            <% } %>
-            <% if (product.taxes.withholding) { %>
-                <li>retenido: <%= product.taxes.withholding %></li>
-            <% } %>
+            <% product.taxes.forEach(function(tax) { %>
+                <li>Tipo de Impuesto: <%= tax.type %></li>
+                <li>Tasa de Impuesto: <%= tax.rate %></li>
+                <li>Base de Impuesto: <%= tax.base %></li>
+                <li>Factor de Impuesto: <%= tax.factor %></li>
+                <li>Retención: <%= tax.withholding %></li>
+            <% }); %>
         </ul>
-
-        <% if (product.unit_key) { %>
-            <p>Clave: <%= product.unit_key %></p>
-        <% } %>
-        <% if (product.unit_name) { %>
-            <p>unit name: <%= product.unit_name %></p>
-        <% } %>
-        <% if (product.sku) { %>
-            <p>sku: <%= product.sku %></p>
-        <% } %>
-
+        <p>Impuestos Locales:</p>
+        <ul>
+            <% product.local_taxes.forEach(function(localTax) { %>
+                <li>Tipo de Impuesto Local: <%= localTax.type %></li>
+                <li>Tasa de Impuesto Local: <%= localTax.rate %></li>
+                <li>Base de Impuesto Local: <%= localTax.base %></li>
+                <li>Retención: <%= localTax.withholding %></li>
+            <% }); %>
+        </ul>
+        <p>Clave de Unidad: <%= product.unit_key %></p>
+        <p>Nombre de Unidad: <%= product.unit_name %></p>
+        <p>SKU: <%= product.sku %></p>
     <% } else { %>
         <p>No se encontró el producto.</p>
     <% } %>

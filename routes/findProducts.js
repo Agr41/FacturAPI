@@ -21,8 +21,8 @@ router.post('/', async (req, res) => {
                   limit: limit
                 });
         // Envía una respuesta al cliente
-        res.send('Productos encontrados');
         console.log(searchResult);
+        res.render('renderProducts', { searchResult });
     } catch (error) {
         console.error('Error:', error);
         res.status(500).send('Error interno del servidor');

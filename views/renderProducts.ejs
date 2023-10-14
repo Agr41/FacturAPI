@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Producto</title>
+</head>
+<body>
+    <h1>Detalles del Producto</h1>
+    <% if (searchResult && searchResult.data && searchResult.data.length > 0) { %>
+    <ul>
+        <% searchResult.data.forEach(function(product) { %>
+        <li>
+        <p>Descripción: <%= product.description %></p>
+        <p>Clave del Producto: <%= product.product_key %></p>
+        <p>Precio: <%= product.price %></p>
+        <p>Impuesto Incluido: <%= product.tax_included %></p>
+        <p>Taxabilidad: <%= product.taxability %></p>
+        <p>Impuestos:</p>
+        <ul>
+            <% product.taxes.forEach(function(tax) { %>
+                <li>Tipo de Impuesto: <%= tax.type %></li>
+                <li>Tasa de Impuesto: <%= tax.rate %></li>
+                <li>Base de Impuesto: <%= tax.base %></li>
+                <li>Factor de Impuesto: <%= tax.factor %></li>
+                <li>Retención: <%= tax.withholding %></li>
+            <% }); %>
+        </ul>
+        <p>Impuestos Locales:</p>
+        <ul>
+            <% product.local_taxes.forEach(function(localTax) { %>
+                <li>Tipo de Impuesto Local: <%= localTax.type %></li>
+                <li>Tasa de Impuesto Local: <%= localTax.rate %></li>
+                <li>Base de Impuesto Local: <%= localTax.base %></li>
+                <li>Retención: <%= localTax.withholding %></li>
+            <% }); %>
+        </ul>
+        <p>Clave de Unidad: <%= product.unit_key %></p>
+        <p>Nombre de Unidad: <%= product.unit_name %></p>
+        <p>SKU: <%= product.sku %></p>
+        </li>
+        <hr>
+        <% }); %>
+    </ul>
+    <% } else { %>
+        <p>No se encontró el producto.</p>
+    <% } %>
+</body>
+</html>

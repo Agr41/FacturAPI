@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingresar Producto</title>
+</head>
+<body>
+    <h2>Ingresar Producto</h2>
+    <form action="/createProduct" method="post">
+
+        <label for="descriptionProducto">Descripción:</label>
+        <input type="text" id="descriptionProducto" name="descriptionProducto">
+        <br>
+        <label for="keyProducto">Clave del Producto:</label>
+        <input type="number" id="keyProducto" name="keyProducto">
+        <br>
+        <label for="priceProducto">Precio:</label>
+        <input type="number" step="0.01" id="priceProducto" name="priceProducto">
+         <br>
+        <label for="taxIncludedProducto">Impuestos incluidos:</label>
+        <input type="checkbox" id="taxIncludedProducto" name="taxIncludedProducto">
+        <br> 
+<hr>        
+        <h2>Impuestos</h2>
+        <label for="taxabilityProducto">Código de Impuestos:</label>
+        <select id="taxabilityProducto" name="taxabilityProducto">
+            <option value="01">01: No objeto de impuesto</option>
+            <option value="02">02: Sí objeto de impuesto</option>
+            <option value="03">03: Sí objeto de impuesto, pero no obligado a desglose</option>
+            <option value="04">04: Sí objeto de impuesto, y no causa impuesto</option>
+        </select>
+        <br>
+        <label for="taxesType">Tipo de Impuesto:</label>
+        <input type="text" id="taxesType" name="taxesType">
+        <br>
+        <label for="taxesRate">Tasa de Impuesto:</label>
+        <input type="number" step="0.01" id="taxesRate" name="taxesRate">
+        <br>
+        <!-- Para los impuestos 'taxes' -->
+<label for="taxesBase">Base de Impuesto:</label>
+<input type="number" step="0.01" id="taxesBase" name="taxesBase">
+<br>
+<label for="taxesFactor">Factor de Impuesto:</label>
+<input type="text" id="taxesFactor" name="taxesFactor">
+<br>
+<label for="taxesWithholding">Retención de Impuesto:</label>
+<input type="number" step="0.01" id="taxesWithholding" name="taxesWithholding">
+<br><br>
+<h2>Impuestos locales</h2>
+<!-- Para los impuestos locales 'local_taxes' -->
+<label for="taxesLocalType">Tipo de Impuesto Local:</label>
+<input type="text" id="taxesLocalType" name="taxesLocalType">
+<br>
+<label for="taxesLocalRate">Tasa de Impuesto Local:</label>
+<input type="number" step="0.01" id="taxesLocalRate" name="taxesLocalRate">
+<br>
+<label for="taxesLocalBase">Base de Impuesto Local:</label>
+<input type="number" step="0.01" id="taxesLocalBase" name="taxesLocalBase">
+<br>
+<label for="taxesLocalWithholding">Retención de Impuesto Local:</label>
+<input type="number" step="0.01" id="taxesLocalWithholding" name="taxesLocalWithholding">
+<br>
+
+        <hr>
+        <br>
+        <label for="unitKey">Clave de la Unidad:</label>
+        <input type="text" id="unitKey" name="unitKey">
+        <br>
+        <label for="unitName">Nombre de la Unidad:</label>
+        <input type="text" id="unitName" name="unitName">
+        <br>
+        <label for="sku">Identificador del producto:</label>
+        <input type="text" id="sku" name="sku">
+        <br><br>
+        <button type="submit">Ingresar Producto</button>
+    </form>
+</body>
+</html>

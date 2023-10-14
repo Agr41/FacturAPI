@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario para Editar Objeto</title>
+</head>
+<body>
+    <h1>Formulario para Editar Objeto</h1>
+    <form action="/editProduct" method="post" enctype="application/json">
+        <label for="product_id">ID del objeto a editar:</label>
+        <input type="text" id="product_id" name="product_id" required><br>
+
+        <label for="description">Descripción del bien o servicio como aparecerá en la factura:</label>
+        <input type="text" id="description" name="description" ><br>
+
+        <label for="product_key">Clave de producto/servicio:</label>
+        <input type="text" id="product_key" name="product_key" ><br>
+
+        <label for="price">Precio por unidad del bien o servicio:</label>
+        <input type="number" id="price" name="price" ><br>
+
+        <label for="tax_included">¿Impuestos incluidos en el precio?</label>
+        <select id="tax_included" name="tax_included">
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+        </select><br>
+
+        <label for="taxability">Código que representa si el bien o servicio es objeto de impuesto:</label>
+        <select id="taxability" name="taxability">
+            <option value="01">No objeto de impuesto</option>
+            <option value="02">Sí objeto de impuesto</option>
+            <option value="03">Sí objeto de impuesto, pero no obligado a desglose</option>
+            <option value="04">Sí objeto de impuesto, y no causa impuesto</option>
+        </select><br>
+
+        <!-- Taxes (impuestos) -->
+        <label for="tax_rate">Tasa de impuesto (fracción decimal):</label>
+        <input type="number" id="tax_rate" name="tax_rate" ><br>
+
+        <label for="tax_base">Base del impuesto:</label>
+        <input type="number" id="tax_base" name="tax_base" ><br>
+
+        <label for="tax_type">Tipo de impuesto:</label>
+        <input type="text" id="tax_type" name="tax_type" ><br>
+
+        <label for="tax_factor">Tipo factor:</label>
+        <select id="tax_factor" name="tax_factor">
+            <option value="Tasa">Tasa</option>
+            <option value="Cuota">Cuota</option>
+            <option value="Exento">Exento</option>
+        </select><br>
+
+        <label for="tax_withholding">¿Impuesto retenido?</label>
+        <select id="tax_withholding" name="tax_withholding">
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+        </select><br>
+
+        <!-- Local Taxes (impuestos locales) -->
+        <label for="local_tax_rate">Tasa de impuesto local (fracción decimal):</label>
+        <input type="number" id="local_tax_rate" name="local_tax_rate"><br>
+
+        <label for="local_tax_type">Nombre del impuesto local:</label>
+        <input type="text" id="local_tax_type" name="local_tax_type"><br>
+
+        <label for="local_tax_base">Base del impuesto local:</label>
+        <input type="number" id="local_tax_base"><br>
+
+        <label for="local_tax_withholding">¿Impuesto local retenido?</label>
+        <select id="local_tax_withholding" name="local_tax_withholding">
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+        </select><br>
+
+        <label for="unit_key">Clave de unidad de medida:</label>
+        <input type="text" id="unit_key" name="unit_key" ><br>
+
+        <label for="unit_name">Palabra que representa la unidad de medida:</label>
+        <input type="text" id="unit_name" name="unit_name" ><br>
+
+        <label for="sku">Identificador de uso interno:</label>
+        <input type="text" id="sku" name="sku" ><br>
+
+        <input type="submit" value="Editar Objeto">
+    </form>
+</body>
+</html>

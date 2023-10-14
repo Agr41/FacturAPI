@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Producto</title>
+</head>
+<body>
+    <h1>Detalles del Producto</h1>
+    <% if (product) { %>
+        <p>Descripcion: <%= product.description %></p>
+        <% if (product.product_key) { %>
+            <p>Clave: <%= product.product_key %></p>
+        <% } %>
+        <% if (product.price) { %>
+            <p>precio: <%= product.price %></p>
+        <% } %>
+        <% if (product.tax_included) { %>
+            <p>tax_included: <%= product.tax_included %></p>
+        <% } %>
+
+        <p>Taxability:</p>
+        <ul>
+            <% if (product.taxes.rate) { %>
+                <li>rate <%= product.taxes.rate %></li>
+            <% } %>
+            <% if (product.taxes.base) { %>
+                <li>base <%= product.taxes.base %></li>
+            <% } %>
+            <% if (product.taxes.type) { %>
+                <li>type: <%= product.taxes.type %></li>
+            <% } %>
+            <% if (product.taxes.factor) { %>
+                <li>factor: <%= product.taxes.factor %></li>
+            <% } %>
+            <% if (product.taxes.withholding) { %>
+                <li>retenido: <%= product.taxes.withholding %></li>
+            <% } %>
+        </ul>
+
+        <% if (product.unit_key) { %>
+            <p>Clave: <%= product.unit_key %></p>
+        <% } %>
+        <% if (product.unit_name) { %>
+            <p>unit name: <%= product.unit_name %></p>
+        <% } %>
+        <% if (product.sku) { %>
+            <p>sku: <%= product.sku %></p>
+        <% } %>
+
+    <% } else { %>
+        <p>No se encontró el producto.</p>
+    <% } %>
+</body>
+</html>

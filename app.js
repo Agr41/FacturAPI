@@ -10,6 +10,11 @@ var findCustomersRouter = require('./routes/findCustomers');
 var findCustomerRouter = require('./routes/findCustomer');
 var editCustomerRouter = require('./routes/editCustomer');
 var deleteCustomerRouter = require('./routes/deleteCustomer');
+var createProductRouter = require('./routes/createProduct');
+var findProductsRouter = require('./routes/findProducts');
+var findProductRouter = require('./routes/findProduct');
+var editProductRouter = require('./routes/editProduct');
+var deleteProductRouter = require('./routes/deleteProduct');
 
 var app = express();
 
@@ -29,6 +34,11 @@ app.use('/findCustomers', findCustomersRouter);
 app.use('/findCustomer', findCustomerRouter);
 app.use('/editCustomer', editCustomerRouter);
 app.use('/deleteCustomer', deleteCustomerRouter);
+app.use('/createProduct', createProductRouter);
+app.use('/findProducts', findProductsRouter);
+app.use('/findProduct', findProductRouter);
+app.use('/editProduct', editProductRouter);
+app.use('/deleteProduct', deleteProductRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

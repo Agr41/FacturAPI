@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enviar factura</title>
+</head>
+<body>
+    <h1>Formulario para enviar factura</h1>
+    <form action="/correoFactura" method="post">
+        <label for="facturaID">ID de la factura:</label>
+        <input type="text" id="facturaID" name="facturaID" required><br>
+
+        <label for="mail">mail:</label>
+        <input type="mail" id="mail" name="mail" required><br>
+
+        <input type="submit" value="Enviar factura">
+    </form>
+</body>
+</html>

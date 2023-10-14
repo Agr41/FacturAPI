@@ -1,0 +1,28 @@
+<form action="/crearFactura" method="post">
+    <label for="product_id">ID del objeto a obtener:</label>
+    <input type="text" id="product_id" name="product_id" required>
+    <br>
+
+    <label for="idCustomer">ID del cliente:</label>
+    <input type="text" id="idCustomer" name="idCustomer">
+    <br>
+    <hr>
+
+    <label for="payment_code">Código de Pago (2 caracteres):</label>
+    <input type="text" id="payment_code" name="payment_code" required minlength="2" maxlength="2">
+    
+    <br>
+    
+    <label for="folio_number">Número de Folio:</label>
+    <input type="number" id="folio_number" name="folio_number" value="autoincremental">
+    
+    <br>
+    
+    <label for="series">Serie (máximo 25 caracteres):</label>
+    <input type="text" id="series" name="series" maxlength="25">
+    
+    <br>
+    
+    <input type="submit" value="Enviar">
+  </form>
+  

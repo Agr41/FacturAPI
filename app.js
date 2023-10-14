@@ -15,6 +15,10 @@ var findProductsRouter = require('./routes/findProducts');
 var findProductRouter = require('./routes/findProduct');
 var editProductRouter = require('./routes/editProduct');
 var deleteProductRouter = require('./routes/deleteProduct');
+var crearFacturaRouter = require('./routes/crearFactura');
+var listarFacturasRouter = require('./routes/listarFacturas');
+var descargarFacturaRouter = require('./routes/descargarFactura');
+var correoFacturaRouter = require('./routes/correoFactura');
 
 var app = express();
 
@@ -39,6 +43,10 @@ app.use('/findProducts', findProductsRouter);
 app.use('/findProduct', findProductRouter);
 app.use('/editProduct', editProductRouter);
 app.use('/deleteProduct', deleteProductRouter);
+app.use('/crearFactura', crearFacturaRouter);
+app.use('/listarFacturas', listarFacturasRouter);
+app.use('/descargarFactura', descargarFacturaRouter);
+app.use('/correoFactura', correoFacturaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

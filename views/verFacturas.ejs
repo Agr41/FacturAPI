@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facturas</title>
+</head>
+<body>
+    <h1>;Lista de facturas</h1>
+    <% if (invoiceSearch && invoiceSearch.data && invoiceSearch.data.length > 0) { %>
+    <ul>
+        <% invoiceSearch.data.forEach(function(invoice) { %>
+        <li>
+            <p>ID: <%= invoice.id %></p>
+            <p>Customer: <%= invoice.customer.legal_name %></p>
+            <p>Folio: <%= invoice.folio_number %></p>
+            <a><%= invoice.verification_url %></a>
+        </li>
+        <hr>
+        <% }); %>
+    </ul>
+    <% } else { %>
+        <p>No se encontró el producto.</p>
+    <% } %>
+</body>
+</html>
